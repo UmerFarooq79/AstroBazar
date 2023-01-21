@@ -1,0 +1,44 @@
+{
+    "name": "martfury_react_admin",
+    "version": "1.3.2",
+    "private": true,
+    "author": {
+        "name": "nouthemes"
+    },
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start -p 3002"
+    },
+    "dependencies": {
+        "@firebase/storage": "^0.10.0",
+        "@zeit/next-sass": "^1.0.1",
+        "antd": "^4.8.5",
+        "apexcharts": "^3.22.2",
+        "axios": "^0.21.4",
+        "es6-promise": "^4.2.8",
+        "firebase": "^9.15.0",
+        "history": "^4.10.1",
+        "moment": "^2.24.0",
+        "next": "^10.0.3",
+        "next-compose-plugins": "^2.2.1",
+        "next-images": "^1.6.2",
+        "next-redux-saga": "^4.1.2",
+        "next-redux-wrapper": "^6.0.2",
+        "next-routes": "^1.4.2",
+        "node-sass": "^4.12.0",
+        "prettier": "^2.2.1",
+        "react": "^17.0.1",
+        "react-apexcharts": "^1.3.7",
+        "react-dom": "^17.0.1",
+        "react-image-lightbox": "^5.1.1",
+        "react-images": "^1.1.0-beta.3",
+        "react-lazyload": "^2.6.5",
+        "react-redux": "^7.1.3",
+        "react-router-dom": "^6.6.1",
+        "redux": "^4.0.4",
+        "redux-devtools-extension": "^2.13.8",
+        "redux-persist": "^6.0.0",
+        "redux-saga": "^1.1.3"
+    }
+}

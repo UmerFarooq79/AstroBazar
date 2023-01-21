@@ -1,0 +1,46 @@
+{
+  "connection": "default",
+  "collectionName": "components_variants_variants",
+  "info": {
+    "name": "variants",
+    "icon": "align-justify"
+  },
+  "options": {},
+  "attributes": {
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "sale_price": {
+      "type": "decimal"
+    },
+    "thumbnail": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "name": {
+      "type": "string"
+    },
+    "sizes": {
+      "type": "component",
+      "repeatable": true,
+      "component": "product-size.sizes"
+    },
+    "is_sale": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

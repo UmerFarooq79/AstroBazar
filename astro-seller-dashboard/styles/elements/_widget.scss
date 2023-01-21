@@ -1,0 +1,139 @@
+.widget_footer {
+    .widget-title {
+        font-size: 14px;
+        margin-bottom: 40px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+}
+
+.widget_shop {
+    .widget-title {
+        margin-bottom: 30px;
+        font-size: 24px;
+        line-height: 1em;
+    }
+
+    .ps-product--sidebar {
+        margin-bottom: 15px;
+    }
+
+    @media (min-width: 1200px) {
+        .widget-title {
+            margin-bottom: 50px;
+            font-size: 30px;
+        }
+    }
+}
+
+.widget_shop-filter {
+    .ps-slider {
+        display: block;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        height: 5px;
+        background-color: #cecece;
+        position: relative;
+        borde-radius: 0;
+        border: none;
+    }
+
+    .ui-slider-range {
+        top: 0;
+        left: 0;
+        height: 100%;
+        background-color: $color-1st;
+        borde-radius: 0;
+        border: none;
+    }
+
+    .ui-slider-handle {
+        display: inline-block;
+        top: 50%;
+        height: 15px;
+        width: 15px;
+        outline: none;
+        cursor: pointer;
+        background-color: #fff;
+        border: none;
+        box-shadow: 0 0 5px 2px rgba(#ccc, .3);
+        @include transform(translateY(-50%));
+        borde-radius: 50%;
+    }
+
+    .ps-slider__meta {
+        margin-top: 20px;
+        margin-bottom: 0px;
+        font-size: 20px;
+        color: #999;
+        font-size: 14px;
+        text-transform: uppercase;
+
+        span {
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+    }
+
+    .ps-filter__btn {
+        background-color: #888888;
+        color: #fff;
+
+        &:hover {
+            background-color: $color-2nd;
+        }
+    }
+
+    .widget__colors {
+        padding-top: 30px;
+
+        .ps-color {
+            margin-bottom: 25px;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .widget__colors {
+            padding-top: 60px;
+        }
+    }
+}
+
+.widget_blog {
+    .widget-title {
+        margin-bottom: 27px;
+        font-size: 24px;
+        line-height: 1em;
+    }
+
+    &.widget_categories {
+        .ps-list--under {
+            li {
+                a {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+.widget_tags {
+    a {
+        display: inline-block;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        padding: 6px 12px;
+        line-height: 16px;
+        font-size: 10px;
+        color: #bbbbbb;
+        vertical-align: top;
+        text-transform: uppercase;
+        border: 1px solid #eaeaea;
+
+        &:hover {
+            color: $color-heading;
+            border-color: #000;
+        }
+    }
+}
+

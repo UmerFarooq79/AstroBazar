@@ -1,0 +1,25 @@
+{
+  "name": "astrobazar",
+  "version": "1.0.0",
+  "description": "Server side for AstroBazar ",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "Sameed & Umer",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.19.1",
+    "@babel/preset-env": "^7.19.1",
+    "babel-loader": "^8.2.5",
+    "cors": "^2.8.5",
+    "crypto-js": "^4.1.1",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.6.1",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^2.0.20",
+    "stripe": "^10.12.0-beta.1"
+  }
+}

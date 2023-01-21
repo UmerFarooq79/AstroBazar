@@ -1,0 +1,30 @@
+.ps-breadcrumb {
+    li {
+        position: relative;
+        display: inline-block;
+        color: $color-heading;
+        font-size: 14px;
+        &:before {
+            content: '';
+            display: inline-block;
+            vertical-align: middle;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: #bbb;
+            margin: 0 10px;
+        }
+        a {
+            color: $color-text;
+            font-size: 14px;
+            &:hover {
+                color: $color-heading;
+            }
+        }
+        &:first-child {
+            &:before {
+                display: none;
+            }
+        }
+    }
+}

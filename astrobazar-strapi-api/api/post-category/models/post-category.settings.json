@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "post_categories",
+  "info": {
+    "name": "post-category",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "posts": {
+      "collection": "post",
+      "via": "post_categories",
+      "dominant": true
+    }
+  }
+}

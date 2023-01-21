@@ -1,0 +1,376 @@
+.ps-list--social {
+    margin: 0;
+    padding: 0;
+
+    li {
+        position: relative;
+        display: inline-block;
+        margin-right: 15px;
+        vertical-align: top;
+
+        a {
+            display: inline-block;
+            font-size: 14px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            color: #636363;
+            border: 1px solid #404040;
+
+            i {
+                @include center;
+                font-size: 18px;
+            }
+
+            &:hover {
+                color: $color-1st;
+                border-color: $color-1st;
+                background-color: $color-1st;
+
+                i {
+                    color: #ffffff;
+                }
+            }
+
+            &.facebook {
+                background-color: #3b5998;
+
+                i {
+                    color: #ffffff;
+                }
+            }
+
+            &.twitter {
+                background-color: #0084b4;
+
+                i {
+                    color: #ffffff;
+                }
+            }
+
+            &.google-plus {
+                background-color: #FF0000;
+
+                i {
+                    color: #ffffff;
+                }
+            }
+
+            &.instagram {
+                i {
+                    color: #C32AA3;
+                }
+            }
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &.simple {
+        li {
+            margin-right: 0;
+
+            a {
+                width: 30px;
+                height: 30px;
+                border: none;
+                background-color: transparent;
+            }
+        }
+    }
+
+    &.square {
+        li {
+            margin-right: 10px;
+
+            a {
+                width: 85px;
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 0;
+                border: none;
+            }
+        }
+    }
+}
+
+.ps-list--social-color {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 10px;
+
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            width: 38px;
+            height: 38px;
+            color: #ffffff;
+
+            &.facebook {
+                background-color: #1b4e9b;
+
+                &:hover {
+                    background-color: lighten(#1b4e9b, 15%);
+                }
+            }
+
+            &.twitter {
+                background-color: #00aeef;
+
+                &:hover {
+                    background-color: lighten(#00aeef, 15%);
+                }
+            }
+
+            &.google-plus {
+                background-color: #cc0000;
+
+                &:hover {
+                    background-color: lighten(#cc0000, 15%);
+                }
+            }
+
+            &.linkedin {
+                background-color: #2d567f;
+
+                &:hover {
+                    background-color: lighten(#2d567f, 15%);
+                }
+            }
+
+            &.feed {
+                background-color: #f86a02;
+
+                &:hover {
+                    background-color: lighten(#f86a02, 15%);
+                }
+
+            }
+        }
+    }
+}
+
+.ps-list--checked {
+    li {
+        margin-bottom: 20px;
+
+        a {
+            position: relative;
+            display: block;
+            padding-left: 30px;
+            font-size: 14px;
+            color: #313131;
+
+            &:before {
+                display: inline-block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                content: '';
+                width: 20px;
+                height: 20px;
+                border: solid 1px #8d8d8d;
+                transition: all .4s ease;
+            }
+
+            &:after {
+                content: '';
+                display: inline-block;
+                position: absolute;
+                top: 4px;
+                left: 8px;
+                color: #fff;
+                width: 6px;
+                height: 10px;
+                border-right: 2px solid #fff;
+                border-bottom: 2px solid #fff;
+                @include transform(rotate(45deg));
+                @include hidden;
+            }
+
+            &:hover {
+                &:before {
+                    background-color: $color-1st;
+                    border-color: $color-1st;
+                }
+
+                &:after {
+                    @include show;
+                }
+            }
+        }
+
+        &.current {
+            a {
+                &:before {
+                    background-color: $color-1st;
+                    border-color: $color-1st;
+                }
+
+                &:after {
+                    @include show;
+                }
+            }
+        }
+    }
+
+    &.ps-list--checked-circle {
+        li {
+            a {
+                &:before {
+                    border-radius: 50%;
+                }
+
+                &:hover {
+                    &:before {
+                        background-color: #a7a7a7;
+                        border-color: #a7a7a7;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.ps-list--arrow {
+    a {
+        position: relative;
+        display: block;
+        padding-left: 15px;
+        font-size: 14px;
+        letter-spacing: 0.5px;
+        color: #555555;
+
+        &:before {
+            content: "\f105";
+            @include vertical-align();
+            left: 0;
+            font-family: FontAwesome;
+        }
+
+        &:hover {
+            color: $color-1st;
+
+            .circle {
+                background-color: $color-2nd;
+                border-color: $color-2nd;
+
+                &:before {
+                    color: #fff;
+                    @include show;
+                }
+            }
+        }
+    }
+
+    li {
+        margin-bottom: 20px;
+
+        &.current {
+            a {
+                color: $color-2nd;
+            }
+
+            .circle {
+                background-color: $color-2nd;
+
+                &:before {
+                    @include show;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+.ps-list--dot {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+    list-style-type: none;
+
+    li {
+        position: relative;
+        margin-bottom: 10px;
+        padding-left: 20px;
+        color: #000000;
+        line-height: 20px;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 7px;
+            left: 0;
+            width: 6px;
+            height: 6px;
+            background-color: $color-1st;
+            border-radius: 50px;
+        }
+    }
+}
+
+.ps-list--plus {
+    li {
+        margin: 10px 0;
+
+        a {
+            display: block;
+            position: relative;
+            padding-left: 15px;
+            line-height: 20px;
+
+            &:before {
+                content: '+';
+                position: absolute;
+                top: 0;
+                left: 0;
+                line-height: 20px;
+
+            }
+        }
+    }
+}
+
+.ps-list--line {
+    li {
+        a {
+            position: relative;
+            display: inline-block;
+            padding: 5px 0;
+            line-height: 20px;
+            color: $color-text;
+
+            &:before {
+                content: '';
+                position: absolute;
+                bottom: 2px;
+                width: 100%;
+                height: 1px;
+                background-color: #000;
+                transition: all .4s $timing-1;
+                @include transform(scale3d(0, 1, 1));
+                transform-origin: 0% 50%;
+            }
+
+            &:hover {
+                color: $color-heading;
+
+                &:before {
+                    transform-origin: 100% 50%;
+                    @include transform(scale3d(1, 1, 1));
+                }
+            }
+        }
+    }
+}

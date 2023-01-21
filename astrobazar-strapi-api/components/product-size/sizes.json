@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_product_size_sizes",
+  "info": {
+    "name": "sizes",
+    "icon": "align-center"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "character": {
+      "type": "string"
+    }
+  }
+}

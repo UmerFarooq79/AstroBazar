@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_variants_items",
+  "info": {
+    "name": "items",
+    "icon": "bars"
+  },
+  "options": {},
+  "attributes": {
+    "isImage": {
+      "type": "boolean",
+      "default": true
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "title": {
+      "type": "string"
+    },
+    "desc": {
+      "type": "string"
+    },
+    "btn_text": {
+      "type": "string"
+    },
+    "desc_hightlight": {
+      "type": "string"
+    },
+    "text_on_top": {
+      "type": "string"
+    }
+  }
+}

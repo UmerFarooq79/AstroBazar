@@ -1,0 +1,18 @@
+.ps-dropdown {
+    .ps-dropdown__toggle {
+        width: 30px;
+        height: 30px;
+        border-radius: 4px;
+        &:hover {
+            background-color: #ddd;
+        }
+    }
+}
+
+.ps-ant-dropdown {
+    width: 100%;
+    .ant-select-selector {
+        height: 40px !important;
+        align-items: center;
+    }
+}

@@ -1,0 +1,69 @@
+@mixin prefix($property, $value) {
+    #{$property}: #{$value};
+}
+
+@mixin user-select($vals: none) {
+    @include prefix("user-select", $vals);
+}
+
+@mixin backface($vals: hidden) {
+    @include prefix("backface-visibility", $vals);
+}
+
+@mixin perspective($vals) {
+    @include prefix("perspective", $vals);
+}
+
+@mixin max-area($index: 10) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: $index;
+}
+
+@mixin hidden() {
+    visibility: hidden;
+    opacity: 0
+}
+
+@mixin show() {
+    visibility: visible;
+    opacity: 1;
+}
+
+@mixin vertical-align($position: absolute) {
+    position: $position;
+    top: 50%;
+    @include transform(translateY(-50%));
+}
+
+@mixin center($width: null, $height: null) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    @if not $width and not $height {
+        @include transform(translate(-50%, -50%));
+    }
+
+    @else if $width and $height {
+        width: $width;
+        height: $height;
+        margin-top: -($width / 2);
+        margin-left: -($height / 2);
+    }
+
+    @else if not $height {
+        margin-left: -($width / 2);
+        @include transform(translateY(-50%));
+        width: $width;
+    }
+
+    @else {
+        margin-top: -($height / 2);
+        @include transform(translateX(-50%));
+        height: $height;
+    }
+}

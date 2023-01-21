@@ -1,0 +1,54 @@
+.ps-product--detail {
+    .ant-tabs {
+        .ant-tabs-bar {
+            .ant-tabs-nav-wrap {
+                .ant-tabs-tab {
+                    position: relative;
+                    display: inline-block;
+                    color: #999999;
+                    font-size: 20px;
+                    padding: 15px 20px;
+                    line-height: 20px;
+                    font-weight: 600;
+
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        width: 100%;
+                        height: 3px;
+                        background-color: $color-1st;
+                        @include transform(scale3d(0, 1, 1));
+                        @include transform-origin(100% 50%);
+                        transition: transform 0.75s $timing;
+                    }
+
+                    &:hover {
+                        color: $color-heading;
+
+                        &:before {
+                            @include transform(scale3d(1, 1, 1));
+                            @include transform-origin(0 50%);
+                        }
+                    }
+
+                    @media (min-width: 992px) {
+                        font-size: 20px;
+                    }
+                }
+            }
+
+        }
+        .ant-tabs-tab-btn {
+            font-size: 20px !important;
+            font-weight: 600;
+            color: $color-text;
+        }
+        .ant-tabs-tab-active {
+            .ant-tabs-tab-btn {
+                color: $color-heading;
+            }
+        }
+    }
+}

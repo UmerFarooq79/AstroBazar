@@ -1,0 +1,20 @@
+@include gridOptions('.masonry-wrapper', (
+    bgColorItem: #9EC3C3,
+    optionsData: true,
+    maxGap: 10
+));
+
+
+@include gridOptions('.setting', (
+    ratioItem: 60%,
+    bgColorItem: #ccc,
+    columnGap: 10,
+    responsive: (
+        large: 3,
+        medium: 3,
+        small: 2,
+        extraSmall: 1
+    ),
+));
+
+

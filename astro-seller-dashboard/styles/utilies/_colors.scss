@@ -1,0 +1,66 @@
+$color-1st: #fcb800;
+$color-1st-lighter: lighten($color-1st, 20%);
+$color-1st-light: lighten($color-1st, 10%);
+$color-1st-dark: darken($color-1st, 10%);
+$color-1st-darker: darken($color-1st, 20%);
+
+$color-2nd: #2C1DFF;
+$color-2nd-lighter: lighten($color-2nd, 20%);
+$color-2nd-light: lighten($color-2nd, 10%);
+$color-2nd-dark: darken($color-2nd, 10%);
+$color-2nd-darker: darken($color-2nd, 20%);
+
+$color-success: #00C9A7;
+
+$color-success-lighter: lighten($color-success, 20%);
+$color-success-light: lighten($color-success, 10%);
+$color-success-dark: darken($color-success, 10%);
+$color-success-darker: darken($color-success, 20%);
+
+$color-info: #96ED89;
+
+$color-info-lighter: lighten($color-info, 20%);
+$color-info-light: lighten($color-info, 10%);
+$color-info-dark: darken($color-info, 10%);
+$color-info-darker: darken($color-info, 20%);
+
+$color-warning: #FAA806;
+
+$color-warning-lighter: lighten($color-warning, 20%);
+$color-warning-light: lighten($color-warning, 10%);
+$color-warning-dark: darken($color-warning, 10%);
+$color-warning-darker: darken($color-warning, 20%);
+
+$color-danger: #EC2434;
+
+$color-danger-lighter: lighten($color-danger, 20%);
+$color-danger-light: lighten($color-danger, 10%);
+$color-danger-dark: darken($color-danger, 10%);
+$color-danger-darker: darken($color-danger, 20%);
+
+$color-border: #e4e4e4;
+
+$color-border-lighter: lighten($color-border, 20%);
+$color-border-light: lighten($color-border, 10%);
+$color-border-dark: darken($color-border, 10%);
+$color-border-darker: darken($color-border, 20%);
+
+$color-text: #666666;
+
+$color-text-lighter: lighten($color-text, 20%);
+$color-text-light: lighten($color-text, 10%);
+$color-text-dark: darken($color-text, 10%);
+$color-text-darker: darken($color-text, 20%);
+
+$color-contrast: #fff;
+
+$color-contrast-lower: darken($color-contrast, 5%);
+$color-contrast-low: darken($color-contrast, 17%);
+$color-contrast-medium: darken($color-contrast, 52%);
+$color-contrast-high: darken($color-contrast, 80%);
+$color-contrast-high: darken($color-contrast, 88%);
+
+$color-heading: #222;
+$color-dark: #000;
+
+$color-bg-sidebar: #f1f2f6;

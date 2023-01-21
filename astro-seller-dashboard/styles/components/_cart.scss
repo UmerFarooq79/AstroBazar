@@ -1,0 +1,182 @@
+.ps-cart--mini {
+    position: relative;
+
+    .ps-cart__toggle {
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        width: 30px;
+        height: 30px;
+        color: #ffffff;
+
+        span {
+            position: absolute;
+            bottom: 0;
+            right: -6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            vertical-align: top;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background-color: #ce873a;
+
+            i {
+                position: relative;
+                top: -1px;
+                display: inline-block;
+                font-size: 18px;
+                color: #ffffff;
+                font-style: normal;
+                line-height: 1em;
+            }
+        }
+
+        &:hover {
+            color: $color-1st;
+        }
+    }
+
+    .ps-cart__items {
+        border-bottom: none;
+
+        .ps-product--mini-cart {
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #eaeaea;
+
+            &:last-child {
+                margin-bottom: 0;
+                padding-bottom: 0;
+                border: none;
+
+            }
+        }
+    }
+
+
+    .ps-cart__footer {
+        padding-top: 50px;
+        margin-top: 50px;
+        border-top: 1px solid  #eaeaea;
+
+        h3 {
+            display: block;
+            margin-bottom: 20px;
+            font-size: 18px;
+            font-weight: 600;
+            text-transform: capitalize;
+            color: $color-heading;
+            line-height: 30px;
+
+            strong {
+                float: right;
+                color: #c00;
+                font-size: 18px;
+                font-weight: 500;
+            }
+        }
+    }
+
+    figure {
+        .ps-btn {
+            margin-bottom: 10px;
+            padding: 12px 30px;
+            text-align: center;
+            width: 100%;
+        }
+        .ps-btn--black {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 0;
+            min-height: 48px;
+        }
+    }
+
+    &:hover {
+        .ps-cart__content {
+            @include transform(translate(0, 0px));
+            @include show;
+        }
+    }
+}
+
+.ps-cart--mobile {
+
+    .ps-cart__content {
+        padding: 20px 10px 0;
+        min-height: calc(100vh - 250px);
+    }
+
+    .ps-cart__items {
+        padding: 30px 0;
+
+        .ps-product--mini-cart {
+            padding-bottom: 30px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #efd5ba;
+
+            &:last-child {
+                margin-bottom: 0;
+                padding-bottom: 0;
+                border: none;
+
+            }
+        }
+    }
+
+    .ps-cart__footer {
+        padding: 20px 30px 30px;
+        background-color: #f7e8da;
+        border: none;
+
+        h3 {
+            display: block;
+            margin-bottom: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: $color-heading;
+            line-height: 30px;
+
+            strong {
+                float: right;
+                color: #ce873a;
+                font-size: 30px;
+            }
+        }
+    }
+
+    figure {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+
+        .ps-btn {
+            margin-bottom: 10px;
+            padding: 12px 30px;
+            text-align: center;
+        }
+
+        .ps-btn--dark {
+            background-color: #7f462c;
+        }
+    }
+
+    @include media("<xs") {
+        .ps-cart__footer {
+            padding: 20px 15px 0;
+            figure {
+                flex-flow: row wrap;
+                .ps-btn {
+                    width: 100%;
+                    text-align: center;
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}

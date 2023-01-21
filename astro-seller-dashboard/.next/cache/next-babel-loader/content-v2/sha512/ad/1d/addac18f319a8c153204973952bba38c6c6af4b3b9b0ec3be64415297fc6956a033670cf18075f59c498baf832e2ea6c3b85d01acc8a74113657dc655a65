@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { all } from 'redux-saga/effects';\nimport AppSaga from './app/saga';\nimport AuthSaga from './auth/saga';\nexport default function* rootSaga() {\n  yield all([AppSaga(), AuthSaga()]);\n}","map":null,"metadata":{},"sourceType":"module"}

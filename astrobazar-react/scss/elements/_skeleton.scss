@@ -1,0 +1,12 @@
+.ps-skeleton {
+    overflow: hidden;
+    .row {
+        > * {
+            overflow: hidden;
+        }
+    }
+}
+
+.ps-skeleton--product {
+    margin-bottom: 30px;
+}

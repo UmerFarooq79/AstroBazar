@@ -1,0 +1,216 @@
+.menu-toggle, .ps-btn--hamburger {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 50px;
+    background-color: rgba(#2B2B2B, .6);
+
+    span,
+    &:before,
+    &:after {
+        position: absolute;
+        height: 2px;
+        width: 20px;
+        background-color: #fff;
+        z-index: 100;
+        transition: all .4s ease;
+
+    }
+
+    span {
+        left: 15px;
+        width: 15px;
+        top: 50%;
+        @include transform(translateY(-50%));
+    }
+
+    &:before,
+    &:after {
+        content: '';
+        left: 15px;
+    }
+
+    &:before {
+        top: 16px;
+    }
+
+    &:after {
+        bottom: 16px;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &.active {
+        span {
+            @include transform(translateX(100%));
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        &:before,
+        &:after {
+            top: 50%;
+            bottom: auto;
+            width: 20px;
+            @include transform-origin(50% 50%);
+            background-color: #2B2B2B;
+        }
+
+        &:before {
+            @include transform(rotate(45deg));
+        }
+
+        &:after {
+            @include transform(rotate(-45deg));
+        }
+    }
+
+    @include media("<lg") {
+        display: inline-block;
+    }
+}
+
+.ps-btn, button.ps-btn {
+    display: inline-block;
+    padding: 10px 35px;
+    font-size: 14px;
+    line-height: 20px;
+    border: none;
+    font-weight: 500;
+    transition: all .4s ease;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #2B2B2B;
+    cursor: pointer;
+
+    &--rounded {
+        border-radius: 50px;
+    }
+
+    &--curve {
+        border-radius: 5px;
+    }
+
+    &--outline {
+        padding: 15px 36px;
+        font-size: 14px;
+        color: $color-heading;
+        border: 2px solid #222;
+        text-transform: uppercase;
+        background-color: transparent;
+
+        &:hover {
+            background-color: $color-1st;
+            border-color: $color-1st;
+            color: #ffffff;
+        }
+    }
+
+    &--fullwidth {
+        width: 100%;
+        text-align: center;
+    }
+
+    &--sm {
+        padding: .5rem 2rem;
+        font-size: 1.2rem;
+
+        &.ps-btn--curve {
+            border-radius: 3px;
+        }
+    }
+
+    &--lg {
+        padding: 1.5rem 4rem;
+    }
+
+    &--xl {
+        padding: 2rem 6rem;
+        font-size: 1.6rem;
+    }
+
+    &--reverse {
+        background-color: #576391;
+
+        &:hover {
+            background-color: $color-2nd;
+        }
+    }
+
+    &--gray {
+        background-color: #e5e5e5;
+        color: #000000;
+        font-size: 1.6rem;
+    }
+
+    &--black {
+        background-color: $color-heading;
+
+        &.ps-btn--outline {
+            background-color: transparent;
+            border: 2px solid $color-heading;
+            color: $color-heading;
+
+            &:hover {
+                background-color: $color-heading;
+                color: #ffffff;
+            }
+        }
+    }
+    
+    &.success{
+        background-color: #2B2B2B;
+    }
+    
+    &:hover, &:active {
+        color: #fff;
+        background-color: $color-1st;
+
+        &.ps-btn--black {
+            background-color: $color-1st;
+        }
+    }
+}
+
+.ps-btn--close {
+    display: inline-block;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    transition: all .4s ease;
+    border-radius: 50%;
+
+    &:before, &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 2px;
+        height: 50%;
+        background-color: #9f9a98;
+        @include transform-origin(center center);
+        transition: all .4s ease;
+    }
+
+    &:before {
+        @include transform(translate(-50%, -50%) rotate(45deg));
+    }
+
+    &:after {
+        @include transform(translate(-50%, -50%) rotate(-45deg));
+    }
+
+    &:hover {
+        @include transform(rotate(180deg));
+
+        &:before, &:after {
+            background-color: #2B2B2B;
+            transition-delay: .3s;
+        }
+    }
+}
+

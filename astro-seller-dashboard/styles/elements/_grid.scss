@@ -1,0 +1,19 @@
+html, body {
+    min-height: 100%;
+    position: relative;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+    }
+}
+
+body {
+    overflow-x: hidden;
+}
+
+
+.no-main {
+    min-height: 100vh;
+}

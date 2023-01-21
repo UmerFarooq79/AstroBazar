@@ -1,0 +1,60 @@
+.ps-panel--sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    max-width: 470px;
+    height: 100vh;
+    overflow-y: auto;
+    z-index: 10001;
+    background-color: #fff;
+    transform: translateX(100%);
+    border-left: 1px solid #eaeaea;
+    transition: transform .4s cubic-bezier(0.7, 0, .3, 1) 0s;
+    @extend %list-reset;
+
+    .ps-panel__close {
+        font-size: 30px;
+        color: $color-text;
+    }
+
+    .ps-panel__header {
+        position: relative;
+        padding: 20px 30px 0;
+    }
+
+    .ps-panel__content {
+        padding: 30px;
+    }
+
+    &.active {
+        @include transform(translateX(0));
+    }
+
+    @media (min-width: 768px) {
+        .ps-panel__close {
+            font-size: 40px;
+        }
+
+        .ps-panel__header {
+            padding: 20px 30px 0;
+        }
+
+        .ps-panel__content {
+            padding: 50px;
+        }
+    }
+
+}
+
+#navigation-mobile {
+    .ps-panel__header {
+    }
+
+    .ps-panel__content {
+        height: 100%;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: flex-start;
+    }
+}

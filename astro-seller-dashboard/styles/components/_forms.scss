@@ -1,0 +1,130 @@
+.ps-form {
+    .ps-form__header {
+        h4 {
+            font-size: 20px;
+            font-weight: 600;
+            text-transform: capitalize;
+        }
+    }
+
+    .ps-form__bottom {
+        padding-top: 50px;
+        text-align: center;
+        .ps-btn {
+            margin-right: 20px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+    @media screen and (max-width: 1679px) {
+        .ps-form__bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .ps-btn {
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+.ps-form--search-bar {
+    position: relative;
+
+    input {
+        border: none;
+        border-bottom: 1px solid #ddd;
+        text-indent: 20px;
+
+        &:hover {
+            border-bottom-color: $color-1st;
+        }
+    }
+
+    button {
+        @include vertical-align();
+        left: 0;
+        font-size: 18px;
+        border: none;
+        background-color: transparent;
+    }
+}
+
+.ps-form--search-simple {
+    position: relative;
+    max-width: 360px;
+    width: 100%;
+
+    button {
+        @include vertical-align();
+        right: 10px;
+        background: none;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.4s ease;
+        font-size: 16px;
+    }
+
+    input {
+        height: 40px;
+    }
+}
+
+.ps-form--filter {
+    display: flex;
+    flex-flow: column wrap;
+    > * {
+        flex-basis: 100%;
+    }
+
+    input {
+        height: 40px;
+    }
+
+    .ps-btn {
+        height: 40px;
+        padding: 0 30px;
+        font-size: 13px;
+    }
+
+    .form-group {
+        margin-bottom: 10px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        .form-group {
+            padding: 0 5px;
+        }
+
+        .ps-form__left {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin: 0 -5px;
+            margin-bottom: 10px;
+            > * {
+                flex-basis: 100%;
+            }
+
+            .form-group {
+                margin-bottom: 10px;
+            }
+        }
+
+        .ps-form__right {
+            padding-left: 10px;
+            max-width: 100px;
+        }
+    }
+}
+
+.ps-form--account-settings {
+    .ps-form__footer {
+    }
+}

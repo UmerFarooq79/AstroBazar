@@ -1,0 +1,50 @@
+.table-responsive {
+    @media (min-width: 1200px) {
+        overflow-x: initial;
+    }
+}
+
+.ps-table {
+    background-color: #fff;
+    .dropdown-menu {
+        padding: 0;
+        a.dropdown-item {
+            font-size: 13px;
+        }
+    }
+    strong {
+        font-weight: 600;
+    }
+    thead {
+        border-bottom: 1px solid #ededed;
+        tr {
+            th {
+                padding: $space-md;
+                border: none;
+                border: none;
+                color: #999999;
+                background-color: #fff;
+            }
+        }
+    }
+
+    tbody {
+        tr {
+            td {
+                padding: 12px 10px;
+                border: none;
+                margin: 0 auto;
+                vertical-align: middle;
+                &:last-child {
+                    text-align: right;
+                }
+            }
+
+            &:nth-child(even) {
+                td {
+                    background-color: #f3f4f8;
+                }
+            }
+        }
+    }
+}
