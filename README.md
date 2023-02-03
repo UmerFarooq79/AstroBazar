@@ -1,6 +1,6 @@
 # AstroBazar
 A MultiVendor eCommerce platform built with React, Next, MUI, Node js and MongoDB
-To RUn this project, You must have node version 14 installed. 
+To Run this project, You must have node version 14 installed. 
 Open your Terminal and navigate to Server and type "Npm Install" to download dependancies for this project.
 Then "Npm start" to start the server
 Similary navigate to other folders and do "Npm intsall"
